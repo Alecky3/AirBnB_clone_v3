@@ -83,7 +83,7 @@ class DBStorage:
                 if id == obj.split('.')[-1]:
                     return obj
         return None
-    
+
     def count(self, cls=None):
         """Retuns the number of objects in storage matching cls"""
         if cls is not None:
