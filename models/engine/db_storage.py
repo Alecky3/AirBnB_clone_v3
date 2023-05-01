@@ -89,5 +89,7 @@ class DBStorage:
         if cls is not None:
             objs = self.__session.query(cls).count()
             return objs
-        all_objs = self.__session.query(classes.values())
+        all_objs = 0
+        for cls in classes.values():
+            all_objs += self.__session.query(cls).count()
         return all_objs
